@@ -1,0 +1,161 @@
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  background-color: rgba(23, 72, 135, 0.05);
+  margin: 0 auto;
+  max-width: 67.5rem;
+}
+
+@media all and (max-width: 62rem) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  p {
+    font-size: 1.25rem;
+  }
+  
+  .wrapper {
+    max-width: 48rem;
+  }
+}
+
+@media all and (max-width: 36rem) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  .wrapper {
+    max-width: 20rem;
+  }
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ac_container {
+  padding: 1rem;
+}
+
+.ac {
+  width: 100%;
+}
+
+.ac div.ac_container img.close_button {
+  opacity: 0;
+  transition: all 100ms;
+}
+
+.ac:hover div.ac_container img.close_button {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.label {
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.label__header {
+  align-items: center;
+  background-color: rgba(23, 72, 135, 0.15);
+  border-top: 0.06rem solid gray;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.label:hover img.close_button {
+  transform: rotateY(0deg) rotate(45deg);
+}
+
+input[type=radio]:checked + .label {
+  color: #0964aa;
+  font-style: normal;
+  font-weight: 700;
+}
+
+input[type=radio]:checked + .label img.close_button {
+  transform: rotateY(0deg) rotate(45deg);
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.close_button {
+  height: 2rem;
+  transition: all 500ms;
+  width: 2rem;
+}
+
+.close_button:hover {
+  transform: rotateY(0deg) rotate(45deg);
+  transition: all 500ms;
+}
+
+.ac_data {
+  background-color: white;
+  background-color: rgba(23, 72, 135, 0.075);
+  display: flex;
+  justify-content: center;
+}
+
+.ac_data__img {
+  display: flex;
+  height: 0;
+  justify-content: center;
+  transition: all 500ms;
+  width: 0;
+}
+
+.ac_container:hover > div.ac_data > div.ac_data__img {
+  height: 100%;
+  transition: all 500ms;
+  width: 100%;
+}
+
+input[type=radio]:checked ~ div.ac_data div.ac_data__img {
+  height: 100%;
+  transition: all 500ms;
+  width: 100%;
+}
+
+input[type=radio]:checked + label.label div.ac_data > div.ac_data__img {
+  height: 100%;
+  transition: all 500ms;
+  width: 100%;
+}
+
+.label:hover > div.ac_data > div.ac_data__img {
+  height: 100%;
+  transition: all 500ms;
+  width: 100%;
+}
+
+input[type=radio]:checked ~ div.ac_data div.ac_data__img {
+  height: 100%;
+  transition: all 500ms;
+  width: 100%;
+}
