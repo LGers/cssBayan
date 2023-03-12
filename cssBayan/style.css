@@ -1,17 +1,42 @@
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 67.5rem;
   background-color: gray;
-  
 }
 
 @media all and (max-width: 62rem) { /*//992px*/
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+  
   .wrapper {
     max-width: 48rem;
   }
 }
 
 @media all and (max-width: 36rem) { /*576px*/
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
   .wrapper {
     max-width: 20rem;
   }
@@ -93,6 +118,8 @@ input[type=radio] {
 }
 
 .ac_data__img{
+  display: flex;
+  justify-content: center;
   height: 0;
   width: 0;
   transition: all 500ms;
