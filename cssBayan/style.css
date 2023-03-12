@@ -11,16 +11,16 @@ p {
 }
 
 .wrapper {
+  background-color: rgba(23, 72, 135, 0.05);
   margin: 0 auto;
   max-width: 67.5rem;
-  background-color: gray;
 }
 
-@media all and (max-width: 62rem) { /*//992px*/
+@media all and (max-width: 62rem) {
   h1 {
     font-size: 3rem;
   }
-
+  
   p {
     font-size: 1.25rem;
   }
@@ -30,22 +30,24 @@ p {
   }
 }
 
-@media all and (max-width: 36rem) { /*576px*/
+@media all and (max-width: 36rem) {
   h1 {
     font-size: 2rem;
   }
+  
   p {
     font-size: 1rem;
   }
+  
   .wrapper {
     max-width: 20rem;
   }
 }
 
 .content {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
@@ -57,12 +59,12 @@ p {
   width: 100%;
 }
 
-.ac div.ac_container img.close_button{
+.ac div.ac_container img.close_button {
   opacity: 0;
   transition: all 100ms;
 }
 
-.ac:hover div.ac_container img.close_button{
+.ac:hover div.ac_container img.close_button {
   opacity: 1;
   transition: all 500ms;
 }
@@ -75,14 +77,15 @@ p {
 }
 
 .label__header {
-  background-color: white;
-  padding: 1rem;
+  align-items: center;
+  background-color: rgba(23, 72, 135, 0.15);
+  border-top: 1px solid gray;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid gray;
+  padding: 1rem;
 }
+
 .label:hover img.close_button {
   transform: rotateY(0deg) rotate(45deg);
 }
@@ -90,6 +93,7 @@ p {
 input[type=radio]:checked + .label {
   color: #0964aa;
   font-style: normal;
+  font-weight: 700;
 }
 
 input[type=radio]:checked + .label img.close_button {
@@ -101,9 +105,9 @@ input[type=radio] {
 }
 
 .close_button {
-  width: 2rem;
   height: 2rem;
   transition: all 500ms;
+  width: 2rem;
 }
 
 .close_button:hover {
@@ -113,44 +117,45 @@ input[type=radio] {
 
 .ac_data {
   background-color: white;
+  background-color: rgba(23, 72, 135, 0.075);
   display: flex;
   justify-content: center;
 }
 
-.ac_data__img{
+.ac_data__img {
   display: flex;
-  justify-content: center;
   height: 0;
-  width: 0;
+  justify-content: center;
   transition: all 500ms;
+  width: 0;
 }
 
 .ac_container:hover > div.ac_data > div.ac_data__img {
   height: 100%;
-  width: 100%;
   transition: all 500ms;
-}
-
-input[type=radio]:checked ~ div.ac_data div.ac_data__img{
-  transition: all 500ms;
-  height: 100%;
   width: 100%;
 }
 
-input[type=radio]:checked + label.label div.ac_data > div.ac_data__img{
-  transition: all 500ms;
+input[type=radio]:checked ~ div.ac_data div.ac_data__img {
   height: 100%;
+  transition: all 500ms;
+  width: 100%;
+}
+
+input[type=radio]:checked + label.label div.ac_data > div.ac_data__img {
+  height: 100%;
+  transition: all 500ms;
   width: 100%;
 }
 
 .label:hover > div.ac_data > div.ac_data__img {
   height: 100%;
-  width: 100%;
   transition: all 500ms;
+  width: 100%;
 }
 
-input[type=radio]:checked ~ div.ac_data div.ac_data__img{
-  transition: all 500ms;
+input[type=radio]:checked ~ div.ac_data div.ac_data__img {
   height: 100%;
+  transition: all 500ms;
   width: 100%;
 }
