@@ -79,7 +79,7 @@ p {
 .label__header {
   align-items: center;
   background-color: rgba(23, 72, 135, 0.15);
-  border-top: 1px solid gray;
+  border-top: 0.06rem solid gray;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
